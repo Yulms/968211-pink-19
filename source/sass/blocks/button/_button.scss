@@ -2,21 +2,109 @@
   display: inline-block;
   vertical-align: middle;
   appearance: button;
-  font: inherit;
   text-align: center;
-  text-transform: none;
   text-decoration: none;
   overflow: visible;
   word-break: break-word;
   background: 0;
-  border: none;
   cursor: pointer;
+  outline: none;
 }
 
-.button__icon {
-  display: block;
-  margin: 0 auto;
+.button--download {
+  padding: 13px;
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 3px solid #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($color-primary, 0.3);
+  }
 }
+
+.button--form-send {
+  padding: 17px 13px 16px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $color-accent;
+  border-radius: 3px;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $color-accent--darker;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+}
+
+.button--upload {
+  padding: 16px 13px 15px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-primary;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 3px solid $color-primary;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $color-primary;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+}
+
+.button--cancel {
+  padding: 16px 13px 15px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: rgba(40, 54, 69, 0.1);
+  background-color: transparent;
+  border-radius: 100px;
+  border: 3px solid rgba($color-secondary, 0.1);
+
+  &:hover,
+  &:focus {
+    color: rgba(40, 54, 69, 0.3);
+    border: 3px solid rgba($color-secondary, 0.3);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.button:disabled,
+.button.disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  cursor: default;
+}
+
+
 
 // .button--primary {
 //   padding: 14px;
@@ -45,10 +133,4 @@
 
 // .button--primary:active:not(:disabled) {
 //   color: rgba(255, 255, 255, 0.3);
-// }
-
-
-// .button:disabled {
-//   cursor: default;
-//   opacity: 0.5;
 // }
