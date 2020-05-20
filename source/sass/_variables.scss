@@ -1,0 +1,40 @@
+$mobile-only: 659px;
+$tablet: 660px;
+$tablet-only: 959px;
+$desktop: 960px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$side-paddings-mobile: 20px;
+$side-paddings-tablet: 20px;
+$side-paddings-desktop: 10px;
+
+$mobile-column-count: 1;
+$tablet-column-count: 2;
+$desktop-column-count: 6;
+
+$mobile-column-width: 100% / $mobile-column-count;
+$tablet-column-width: 100% / $tablet-column-count;
+$desktop-column-width: 100% / $desktop-column-count;
+
+// $mobile-max-width: 500px;
+// $tablet-max-width: 1000px;
+// $desktop-max-width: 1500px;
+
+$mobile-max-width: 320px;
+$tablet-max-width: 660px;
+$desktop-max-width: 960px;
+
+$color-primary: #d22856;
+$color-primary2: #d4345f;
+$color-secondary: #283645;
+$color-accent: #2aab6d;
+
+$color-text-base: $color-secondary;
+$color-text-accent: $color-primary;
+$color-title: #000000;
+
+$color-background: #f2f2f2;
+$color-border: rgba(#283645, 0.1);
+$controls-color: #e5e5e5;

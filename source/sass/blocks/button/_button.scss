@@ -1,0 +1,54 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  appearance: button;
+  font: inherit;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  overflow: visible;
+  word-break: break-word;
+  background: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.button__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+// .button--primary {
+//   padding: 14px;
+//   line-height: 20px;
+//   font-weight: 700;
+//   color: $controls-color;
+//   text-transform: uppercase;
+//   border: 2px solid $controls-color;
+//   outline: none;
+
+//   @media (max-width: $mobile-only) {
+//     font-size: 18px;
+//   }
+
+//   @media (min-width: $tablet) {
+//     font-size: 17px;
+//   }
+// }
+
+// .button--primary:hover:not(:disabled),
+// .button--primary:focus:not(:disabled) {
+//   color: #ffffff;
+//   background-color: $controls-color;
+//   border-color: $controls-color;
+// }
+
+// .button--primary:active:not(:disabled) {
+//   color: rgba(255, 255, 255, 0.3);
+// }
+
+
+// .button:disabled {
+//   cursor: default;
+//   opacity: 0.5;
+// }

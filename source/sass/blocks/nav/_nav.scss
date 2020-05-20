@@ -1,0 +1,143 @@
+.nav {
+  position: relative;
+
+  @include media-breakpoint-up(desktop) {
+    flex-shrink: 0;
+    max-width: 75%;
+  }
+}
+
+.nav__toggle {
+  @include media-breakpoint-down(tablet) {
+    position: absolute;
+    right: 0;
+    padding: 23px 19px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  @include media-breakpoint-only(mobile) {
+    top: -71px;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    top: -88px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    display: none;
+  }
+}
+
+@media not all and (hover: none) {
+  .nav__toggle:hover {
+    color: $color-primary;
+  }
+}
+
+.nav__toggle:active {
+  color: $color-primary;
+  opacity: 0.3;
+}
+
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
+.nav__toggle-icon {
+  display: block;
+  fill: currentColor;
+}
+
+.nav--opened .nav__toggle-icon--burger {
+  display: none;
+}
+
+.nav--closed .nav__toggle-icon--close {
+  display: none;
+}
+
+
+.nav__list {
+  padding: 0;
+  list-style: none;
+
+  @include media-breakpoint-down(tablet) {
+    margin: 0;
+    border-top: 1px solid #000000;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0 0 0 -80px;
+  }
+}
+
+.nav--closed .nav__list {
+  @include media-breakpoint-down(tablet) {
+    display: none;
+  }
+}
+
+.nav__item {
+  @include media-breakpoint-up(desktop) {
+    margin-left: 80px;
+  }
+}
+
+.nav__link {
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+
+  @include media-breakpoint-down(tablet) {
+    padding: 15px;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(#ffffff, 0.15);
+    border-bottom: 1px solid #000000;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 32px;
+  }
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: $color-primary;
+}
+
+.nav__link:active {
+  opacity: 0.3;
+
+  @include media-breakpoint-up(desktop) {
+    color: #ffffff;
+  }
+}
+
+.nav__link--active {
+  @include media-breakpoint-up(desktop) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+}

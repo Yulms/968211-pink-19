@@ -1,0 +1,43 @@
+.logo {
+  outline: none;
+}
+
+.logo:hover:not(:active),
+.logo:focus:not(:active) {
+  color: $color-primary;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+.logo--header {
+  color: #ffffff;
+}
+
+.logo--footer {
+  color: $color-secondary;
+}
+
+.logo__image {
+  display: none;
+  fill: currentColor;
+}
+
+.logo__image--mobile {
+  @include media-breakpoint-only(mobile) {
+    display: block;
+  }
+}
+
+.logo__image--tablet {
+  @include media-breakpoint-only(tablet) {
+    display: block;
+  }
+}
+
+.logo__image--desktop {
+  @include media-breakpoint-only(desktop) {
+    display: block;
+  }
+}

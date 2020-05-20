@@ -27,14 +27,15 @@ gulp.task("clean", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "!source/img/**/*icon-*.svg",
-    // "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
+      "source/fonts/**/*.{woff,woff2}",
+      "source/img/**",
+      "!source/img/**/*icon-*.svg",
+      // "source/js/**",
+      "source/*.ico",
+      "source/mockups/**/*"
+    ], {
+      base: "source"
+    })
     .pipe(gulp.dest("build"));
 });
 
@@ -46,6 +47,7 @@ gulp.task("css", function () {
     // .pipe(postcss([
     //   autoprefixer()
     // ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -55,15 +57,18 @@ gulp.task("css", function () {
 
 gulp.task("images", function () {
   return gulp.src([
-    "source/img/**/*.{png,jpg,svg}",
-    "!source/img/**/icon-*.svg"
-  ])
+      "source/img/**/*.{png,jpg,svg}",
+      "!source/img/**/icon-*.svg"
+    ])
     .pipe(imagemin([
-      imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
       imagemin.svgo({
-        plugins: [
-          {
+        plugins: [{
             removeViewBox: false
           },
           {
@@ -80,7 +85,8 @@ gulp.task("images", function () {
             cleanupListOfValues: {
               floatPrecision: 1
             }
-          }]
+          }
+        ]
       })
     ]))
     .pipe(gulp.dest("build/img"))
@@ -88,11 +94,13 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({ quality: 80 }))
+    .pipe(webp({
+      quality: 80
+    }))
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("svgsprite", function () {
+gulp.task("svgsprite-icons", function () {
   return gulp.src("source/img/icon-*.svg")
     .pipe(cheerio({
       run: function ($) {
@@ -104,11 +112,8 @@ gulp.task("svgsprite", function () {
       }
     }))
     .pipe(imagemin([
-      imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo({
-        plugins: [
-          {
+        plugins: [{
             removeViewBox: false
           },
           {
@@ -125,13 +130,50 @@ gulp.task("svgsprite", function () {
             cleanupListOfValues: {
               floatPrecision: 1
             }
-          }]
+          }
+        ]
       })
     ]))
     .pipe(svgsprite({
       mode: {
         symbol: {
-          sprite: "sprite.svg",
+          sprite: "sprite-icons.svg",
+          dest: "."
+        }
+      }
+    }))
+    .pipe(gulp.dest("build/img/sprite"));
+});
+
+gulp.task("svgsprite-logo", function () {
+  return gulp.src("source/img/logo-pink*.svg")
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: false
+          },
+          {
+            cleanupNumericValues: {
+              floatPrecision: 1
+            }
+          },
+          {
+            convertPathData: {
+              floatPrecision: 1
+            }
+          },
+          {
+            cleanupListOfValues: {
+              floatPrecision: 1
+            }
+          }
+        ]
+      })
+    ]))
+    .pipe(svgsprite({
+      mode: {
+        symbol: {
+          sprite: "sprite-logo.svg",
           dest: "."
         }
       }
@@ -192,10 +234,11 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("svgsprite", "refresh"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("svgsprite-icons", "refresh"));
+  gulp.watch("source/img/logo-pink*.svg", gulp.series("svgsprite-logo", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "svgsprite", "html", "js"));
+gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "svgsprite-icons", "svgsprite-logo", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));
