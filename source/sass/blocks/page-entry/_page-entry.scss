@@ -1,0 +1,86 @@
+.page-entry {
+  background-color: $color-secondary;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (max-width: $mobile-only) {
+    min-height: 733px;
+    padding-top: 200px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
+    min-height: 729px;
+    padding-top: 200px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 833px;
+    padding-top: 200px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2600px auto;
+    }
+  }
+}
+
+.page-entry__title {
+  font-weight: 300;
+  color: #ffffff;
+
+  @include media-breakpoint-only(mobile) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 50px;
+    line-height: 56px;
+  }
+}
+
+.page-entry--app {}
+
+.page-entry__button {}
+
+.page-entry__description {
+  font-weight: 300;
+  color: #ffffff;
+
+  @include media-breakpoint-only(mobile) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.page-entry__link {}
+
+.page-entry__link-image {}
+
+.page-entry__list {}

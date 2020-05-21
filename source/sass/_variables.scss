@@ -18,18 +18,19 @@ $mobile-column-width: 100% / $mobile-column-count;
 $tablet-column-width: 100% / $tablet-column-count;
 $desktop-column-width: 100% / $desktop-column-count;
 
-// $mobile-max-width: 500px;
-// $tablet-max-width: 1000px;
-// $desktop-max-width: 1500px;
-
 $mobile-max-width: 320px;
 $tablet-max-width: 660px;
 $desktop-max-width: 960px;
 
+// $mobile-max-width: 700px;
+// $tablet-max-width: 1000px;
+// $desktop-max-width: 1500px;
+
 $color-primary: #d22856;
-$color-primary2: #d4345f;
+$color-primary--darker: #d4345f;
 $color-secondary: #283645;
 $color-accent: #2aab6d;
+$color-accent--darker: #1c9b5e;
 
 $color-text-base: $color-secondary;
 $color-text-accent: $color-primary;
