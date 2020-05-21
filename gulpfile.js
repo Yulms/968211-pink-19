@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var gulpMerge = require("gulp-merge");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -25,18 +26,107 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("copy", function () {
+gulp.task("copy-data", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "!source/img/**/*icon-*.svg",
-      // "source/js/**",
-      "source/*.ico",
+      "source/js/**",
       "source/mockups/**/*"
     ], {
       base: "source"
     })
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("copy-raster-img", function () {
+  return gulp.src([
+      "source/img/raster/**/*",
+      "source/*.ico"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("svg-sprite", function () {
+  /* В одноцветных иконках, которым надо менять цвет в css,
+  необходимо удалить атрибуты fill, style и, возможно, stroke
+  Иконки, которым надо менять два цвета или вообще не изменять цвета
+  удаление атрибутов необходимо делать вручную при необходимости.
+  После удаления автоматического удаления атрибутов потоки сливаются */
+  return gulpMerge(
+      gulp.src("source/img/svg/sprited/remove-attr/**/*.svg")
+      .pipe(cheerio({
+        run: function ($) {
+          $("[fill]").removeAttr("fill");
+          $("[style]").removeAttr("style");
+        },
+        parserOptions: {
+          xmlMode: true
+        }
+      })),
+      gulp.src("source/img/svg/sprited/as-is/**/*.svg"))
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: false
+          },
+          {
+            cleanupNumericValues: {
+              floatPrecision: 1
+            }
+          },
+          {
+            convertPathData: {
+              floatPrecision: 1
+            }
+          },
+          {
+            cleanupListOfValues: {
+              floatPrecision: 1
+            }
+          }
+        ]
+      })
+    ]))
+    .pipe(svgsprite({
+      mode: {
+        symbol: {
+          sprite: "_sprite.svg",
+          dest: "."
+        }
+      }
+    }))
+    .pipe(gulp.dest("build/img/svg"));
+});
+
+gulp.task("svg-background", function () {
+  return gulp.src([
+      "source/img/svg/others/**/*.svg"
+    ])
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [{
+            removeViewBox: false
+          },
+          {
+            cleanupNumericValues: {
+              floatPrecision: 1
+            }
+          },
+          {
+            convertPathData: {
+              floatPrecision: 1
+            }
+          },
+          {
+            cleanupListOfValues: {
+              floatPrecision: 1
+            }
+          }
+        ]
+      })
+    ]))
+    .pipe(gulp.dest("build/img/svg"));
 });
 
 gulp.task("css", function () {
@@ -57,147 +147,27 @@ gulp.task("css", function () {
 
 gulp.task("images", function () {
   return gulp.src([
-      "source/img/**/*.{png,jpg,svg}",
-      "!source/img/**/icon-*.svg"
-    ])
+      "source/img/raster/**/*.{png,jpg}"
+    ], {
+      base: "source"
+    })
     .pipe(imagemin([
       imagemin.mozjpeg({
         progressive: true
       }),
       imagemin.optipng({
         optimizationLevel: 3
-      }),
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: false
-          },
-          {
-            cleanupNumericValues: {
-              floatPrecision: 1
-            }
-          },
-          {
-            convertPathData: {
-              floatPrecision: 1
-            }
-          },
-          {
-            cleanupListOfValues: {
-              floatPrecision: 1
-            }
-          }
-        ]
       })
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build"))
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("source/img/raster/**/*.{png,jpg}")
     .pipe(webp({
       quality: 80
     }))
-    .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("svgsprite-icons", function () {
-  return gulp.src("source/img/icon-*.svg")
-    .pipe(cheerio({
-      run: function ($) {
-        $("[fill]").removeAttr("fill");
-        $("[style]").removeAttr("style");
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
-    .pipe(imagemin([
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: false
-          },
-          {
-            cleanupNumericValues: {
-              floatPrecision: 1
-            }
-          },
-          {
-            convertPathData: {
-              floatPrecision: 1
-            }
-          },
-          {
-            cleanupListOfValues: {
-              floatPrecision: 1
-            }
-          }
-        ]
-      })
-    ]))
-    .pipe(svgsprite({
-      mode: {
-        symbol: {
-          sprite: "sprite-icons.svg",
-          dest: "."
-        }
-      }
-    }))
-    .pipe(gulp.dest("build/img/sprite"));
-});
-
-gulp.task("svgsprite-logo", function () {
-  return gulp.src("source/img/logo-pink*.svg")
-    .pipe(imagemin([
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: false
-          },
-          {
-            cleanupNumericValues: {
-              floatPrecision: 1
-            }
-          },
-          {
-            convertPathData: {
-              floatPrecision: 1
-            }
-          },
-          {
-            cleanupListOfValues: {
-              floatPrecision: 1
-            }
-          }
-        ]
-      })
-    ]))
-    .pipe(svgsprite({
-      mode: {
-        symbol: {
-          sprite: "sprite-logo.svg",
-          dest: "."
-        }
-      }
-    }))
-    .pipe(gulp.dest("build/img/sprite"));
-});
-
-// не используется
-gulp.task("svgstore", function () {
-  return gulp.src("source/img/icon-*.svg")
-    .pipe(cheerio({
-      run: function ($) {
-        $("[fill]").removeAttr("fill");
-        $("[style]").removeAttr("style");
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/sprite"));
+    .pipe(gulp.dest("build/img/raster"));
 });
 
 gulp.task("html", function () {
@@ -234,11 +204,22 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("svgsprite-icons", "refresh"));
-  gulp.watch("source/img/logo-pink*.svg", gulp.series("svgsprite-logo", "refresh"));
+  gulp.watch("source/img/svg/sprited/**/*.svg", gulp.series("svg-sprite", "refresh"));
+  gulp.watch("source/img/svg/others/**/*.svg", gulp.series("svg-background", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "svgsprite-icons", "svgsprite-logo", "html", "js"));
+gulp.task("build", gulp.series(
+  "clean",
+  "copy-data",
+  "copy-raster-img",
+  "svg-sprite",
+  "svg-background",
+  "css",
+  "images",
+  "webp",
+  "html",
+  "js"
+));
 gulp.task("start", gulp.series("build", "server"));

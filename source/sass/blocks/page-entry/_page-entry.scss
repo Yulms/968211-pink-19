@@ -6,11 +6,11 @@
   @media (max-width: $mobile-only) {
     min-height: 733px;
     padding-top: 200px;
-    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-image: url("../img/raster/bg-back-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-mobile@2x.jpg");
+      background-image: url("../img/raster/bg-back-mobile@2x.jpg");
       background-size: contain;
     }
   }
@@ -18,11 +18,11 @@
   @media (min-width: $tablet) and (max-width: $tablet-only) {
     min-height: 729px;
     padding-top: 200px;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/raster/bg-back-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/raster/bg-back-tablet@2x.jpg");
       background-size: 1200px auto;
     }
   }
@@ -30,11 +30,11 @@
   @media (min-width: $desktop) {
     min-height: 833px;
     padding-top: 200px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/raster/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/raster/bg-back-desktop@2x.jpg");
       background-size: 2600px auto;
     }
   }
