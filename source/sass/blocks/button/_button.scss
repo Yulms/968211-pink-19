@@ -13,13 +13,21 @@
 
 .button--download {
   padding: 13px;
-  font-size: 21px;
-  line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   background-color: transparent;
   border-radius: 100px;
   border: 3px solid #ffffff;
+
+  @include media-breakpoint-down(tablet) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 21px;
+    line-height: 24px;
+  }
 
   &:hover,
   &:focus {
