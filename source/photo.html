@@ -28,21 +28,21 @@
 
     @media (max-width: 659px) {
       html {
-        background-image: url("mockups/pink-index-mobile.png");
+        background-image: url("mockups/pink-photo-mobile.png");
         background-position: 50% -259px;
       }
     }
 
     @media (min-width: 660px) {
       html {
-        background-image: url("mockups/pink-index-tablet.png");
+        background-image: url("mockups/pink-photo-tablet.png");
         background-position: 50% -255px;
       }
     }
 
     @media (min-width: 960px) {
       html {
-        background-image: url("mockups/pink-index-desktop.png");
+        background-image: url("mockups/pink-photo-desktop.png");
         background-position: 50% 0;
         /* background-image: url("mockups/pink-form-desktop.png"); */
       }
@@ -88,10 +88,10 @@
 
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="/">Главная</a>
+            <a class="header__nav-link" href="#">Главная</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="photo.html">Фотографии</a>
+            <a class="header__nav-link" href="#">Фотографии</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link header__nav-link--active" href="#">Конкурс</a>
@@ -106,52 +106,12 @@
   </header>
 
   <main class="main">
-    <h1 class="visually-hidden">PINK - приложение для поднятия настроения</h1>
+    <h1 class="visually-hidden">PINK - галерея изображений</h1>
 
-    <section class="page-entry page-entry--app">
-      <h2 class="visually-hidden">О приложении</h2>
-      <div class="wrapper page-entry__wrapper">
-        <div class="page-entry__inner">
-          <p class="page-entry__title">Взгляните на&nbsp;жизнь иначе!</p>
-
-          <!-- <picture>
-            <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/iphone-hand-desktop@1x.webp 1x, img/raster/iphone-hand-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/iphone-hand-tablet@1x.webp 1x, img/raster/iphone-hand-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/raster/iphone-hand-mobile@1x.webp 1x, img/raster/iphone-hand-mobile@2x.webp 2x">
-
-            <source media="(min-width: 960px)" srcset="img/raster/iphone-hand-desktop@1x.png 1x, img/raster/iphone-hand-desktop@2x.png 2x">
-            <source media="(min-width: 660px)" srcset="img/raster/iphone-hand-tablet@1x.png 1x, img/raster/iphone-hand-tablet@2x.png 2x">
-            <img class="page-entry__image" src="img/raster/iphone-hand-mobile@1x.png" srcset="img/raster/iphone-hand-mobile@2x.png 2x" alt="Приложение">
-          </picture> -->
-
-          <a class="button button--download page-entry__button" href="#" download="">Скачать приложение</a>
-
-          <ul class="page-entry__list">
-            <li>
-              <a class="page-entry__link" href="#" title="" aria-label="Скачать версию для apple">
-                <svg class="page-entry__link-image" width="47" height="56">
-                  <use xlink:href="img/svg/_sprite.svg#icon-logo-apple"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="page-entry__link" href="#" title="" aria-label="Скачать версию для android">
-                <svg class="page-entry__link-image" width="43" height="47">
-                  <use xlink:href="img/svg/_sprite.svg#icon-logo-android"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="page-entry__link" href="#" title="" aria-label="Скачать версию для windows">
-                <svg class="page-entry__link-image" width="44" height="41">
-                  <use xlink:href="img/svg/_sprite.svg#icon-logo-microsoft"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-
-          <p class="page-entry__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
+    <section class="page-entry">
+      <h2 class="visually-hidden">Фотографии пользователей</h2>
+      <div class="wrapper">
+        <p class="page-entry__title">Фотографии<br> пользователей</p>
       </div>
     </section>
 
