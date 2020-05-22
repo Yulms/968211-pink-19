@@ -1,0 +1,24 @@
+.link {
+  color: $color-primary;
+  text-decoration: underline;
+
+  @include media-breakpoint-down(tablet) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.link:hover,
+.link:focus {
+  color: $color-primary--darker;
+  text-decoration: none;
+}
+
+.link:active {
+  opacity: 0.3;
+}
