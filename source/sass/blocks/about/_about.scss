@@ -45,32 +45,10 @@
 }
 
 .about__list-container {
-  position: relative;
-  z-index: 0;
-  background-color: $color-background;
 
-  &::before {
-    content: "";
-    display: block;
-
-    @include media-breakpoint-only(mobile) {
-      height: 31px;
-      background-image: linear-gradient(to right bottom, #ffffff 31.5px, $color-background 32px);
-    }
-
-    @include media-breakpoint-only(tablet) {
-      position: relative;
-      height: 50px;
-      background-image: linear-gradient(to right bottom, #ffffff 49.5px, $color-background 50px);
-      transform: translateY(-0.5px);
-    }
-
-    @include media-breakpoint-up(desktop) {
-      position: relative;
-      height: 75px;
-      background-image: linear-gradient(to right bottom, #ffffff 74.5px, $color-background 75px);
-      transform: translateY(-0.5px);
-    }
+  @include media-breakpoint-only(tablet) {
+    position: relative;
+    z-index: 0;
   }
 }
 

@@ -1,0 +1,214 @@
+.price {}
+
+.price__inner {
+  @include media-breakpoint-only(mobile) {
+    padding-top: 59px;
+    padding-bottom: 41px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
+    max-width: $tablet-max-width;
+    padding-left: $side-paddings-tablet;
+    padding-right: $side-paddings-tablet;
+    padding-top: 37px;
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop-max-width;
+    padding-left: $side-paddings-desktop;
+    padding-right: $side-paddings-desktop;
+    padding-top: 63px;
+    padding-bottom: 95px;
+  }
+}
+
+.price__table-wrapper {
+  @include media-breakpoint-only(mobile) {
+    width: 100%;
+    margin-bottom: 34px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+}
+
+.price__table {
+  border-collapse: collapse;
+
+  @include media-breakpoint-only(mobile) {
+    scroll-snap-align: center;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    width: 100%;
+  }
+}
+
+.price__cell {
+  @include media-breakpoint-only(mobile) {
+    min-width: $mobile-max-width - $side-paddings-mobile * 2;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    width: 25%;
+  }
+}
+
+.price__cell--head {
+  position: relative;
+  z-index: 0;
+  color: #ffffff;
+  background-color: $color-secondary;
+  border: 2px solid #f2f2f2;
+  overflow: hidden;
+
+  @include media-breakpoint-only(mobile) {
+    padding: 16px;
+    line-height: 30px;
+  }
+
+
+  @include media-breakpoint-only(tablet) {
+    padding: 14px 14px 10px;
+    line-height: 27px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    padding: 16px;
+    line-height: 30px;
+  }
+}
+
+.price__cell--option-name {
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 2px solid $color-controls;
+
+  @include media-breakpoint-only(mobile) {
+    @include visually-hidden;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    padding: 14px 21px;
+    font-size: 18px;
+  }
+}
+
+.price__cell--x-cell {
+  @include media-breakpoint-only(mobile) {
+    @include visually-hidden;
+  }
+}
+
+.price__cell--body {
+  padding: 4px;
+  background-color: #ffffff;
+  border: 2px solid $color-controls;
+  text-transform: uppercase;
+
+  @include media-breakpoint-only(mobile) {
+    padding-left: 22px;
+    padding-right: 20px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    text-align: center;
+  }
+}
+
+.price__cell-wrapper {
+  @include media-breakpoint-only(mobile) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+  }
+}
+
+.price__rate-name {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include media-breakpoint-only(mobile) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 18px;
+  }
+
+}
+
+.price__rate-name--hit {}
+
+.price__rate-price {
+  font-weight: 300;
+
+  @include media-breakpoint-only(mobile) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    font-size: 24px;
+  }
+}
+
+.price__exra-option {
+  @include media-breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.price__slider-points {
+  @include media-breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.price__icon {
+  @include media-breakpoint-up(tablet) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.price__sticker {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 29px;
+  padding: 0 15px;
+  line-height: 29px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $color-primary;
+  user-select: none;
+  transform-origin: top;
+  transform: translateX(-50%) rotate(-45deg) translateY(22px);
+}

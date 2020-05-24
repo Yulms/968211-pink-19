@@ -29,7 +29,7 @@
   position: relative;
   flex-shrink: 0;
   background-color: transparent;
-  border: 2px solid $controls-color;
+  border: 2px solid $color-controls;
 
   @media (max-width: $mobile-only) {
     margin-right: 24px;
@@ -84,7 +84,7 @@
 }
 
 .radiocheck__input:active:not(:disabled)+.radiocheck__box {
-  border-color: rgba($controls-color, 0.3);
+  border-color: rgba($color-controls, 0.3);
 }
 
 .radiocheck__input:checked+.radiocheck__box--radio::after {
