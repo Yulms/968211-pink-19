@@ -384,6 +384,45 @@
       </div>
     </section>
 
+    <section class="contacts">
+      <h2 class="visually-hidden">Контактная информация</h2>
+
+      <div class="wrapper contacts__wrapper">
+        <p class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</p>
+        <div class="contacts__info-container">
+          <p class="contacts__item">
+            <span class="contacts__item-title">Звоните:</span>
+            <a class="contacts__link contacts__item-description" href="tel:+78128556666">+7 (812) 555-66-66</a>
+          </p>
+          <p class="contacts__item contacts__item--write">
+            <span class="contacts__item-title">Пишите:</span>
+            <a class="contacts__link contacts__item-description" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__item-title">Приезжайте в гости:</span>
+            <span class="contacts__item-description">ул. Большая Конюшенная,&nbsp;19/8</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="contacts__map" id="map"></div>
+
+      <noscript>
+        <div class="contacts__map-img">
+          <picture>
+            <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/bg-map-desktop@1x.webp 1200w, img/raster/bg-map-desktop@2x.webp 2400w">
+            <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/bg-map-tablet@1x.webp 700w, img/raster/bg-map-tablet@2x.webp 1400w">
+            <source type="image/webp" srcset="img/raster/bg-map-mobile@1x.webp 320w, img/raster/bg-map-mobile@2x.webp 640w">
+
+            <source media="(min-width: 960px)" srcset="img/raster/bg-map-desktop@1x.jpg 1200w, img/raster/bg-map-desktop@2x.jpg 2400w">
+            <source media="(min-width: 660px)" srcset="img/raster/bg-map-tablet@1x.jpg 700w, img/raster/bg-map-tablet@2x.jpg 1400w">
+            <img class="contacts__map-image" src="img/raster/bg-map-mobile@1x.jpg" srcset="img/raster/bg-map-mobile@2x.jpg 640w" loading="lazy" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+          </picture>
+        </div>
+      </noscript>
+
+    </section>
+
 
 
 

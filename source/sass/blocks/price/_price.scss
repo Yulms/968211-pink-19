@@ -52,7 +52,7 @@
 
 .price__cell {
   @include media-breakpoint-only(mobile) {
-    min-width: $mobile-max-width - $side-paddings-mobile * 2;
+    min-width: 320px - $side-paddings-mobile * 2;
   }
 
   @include media-breakpoint-up(tablet) {
@@ -210,5 +210,16 @@
   background-color: $color-primary;
   user-select: none;
   transform-origin: top;
-  transform: translateX(-50%) rotate(-45deg) translateY(22px);
+
+  @include media-breakpoint-only(mobile) {
+    transform: translateX(-50%) rotate(-45deg) translateY(22px);
+  }
+
+  @include media-breakpoint-only(tablet) {
+    transform: translateX(-50%) rotate(-45deg) translateY(14px);
+  }
+
+  @include media-breakpoint-up(desktop) {
+    transform: translateX(-50%) rotate(-45deg) translateY(22px);
+  }
 }
