@@ -11,17 +11,17 @@
   opacity: 0.3;
 }
 
+.logo__image {
+  display: none;
+  fill: currentColor;
+}
+
 .logo--header {
   color: #ffffff;
 }
 
 .logo--footer {
   color: $color-secondary;
-}
-
-.logo__image {
-  display: none;
-  fill: currentColor;
 }
 
 .logo__image--mobile {

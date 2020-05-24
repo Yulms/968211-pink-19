@@ -167,7 +167,7 @@
   }
 
   @include media-breakpoint-up(desktop) {
-    height: 502px;
+    height: 480px;
   }
 }
 
@@ -181,7 +181,7 @@
   }
 
   @include media-breakpoint-up(desktop) {
-    margin-top: -502px;
+    margin-top: -480px;
   }
 }
 
