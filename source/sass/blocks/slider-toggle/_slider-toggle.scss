@@ -1,0 +1,35 @@
+.slider-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-toggle__button {
+  display: block;
+  border: none;
+  background: 0;
+}
+
+.slider-toggle__button--left {
+  padding: 4px 26px 4px 0;
+}
+
+.slider-toggle__button--right {
+  padding: 4px 0 4px 26px;
+}
+
+.slider-toggle__icon {
+  display: block;
+  opacity: 0.3;
+}
+
+.slider-toggle__button:hover,
+.slider-toggle__button:focus {
+  opacity: 0.6;
+}
+
+.slider-toggle__button:active {
+  opacity: 0.1;
+}

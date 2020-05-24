@@ -1,0 +1,42 @@
+.slider-points__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-points__item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slider-points__link {
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+
+.slider-points__link::before {
+  content: "";
+  margin: auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-secondary;
+  opacity: 0.3;
+}
+
+.slider-points__link--active::before {
+  box-sizing: content-box;
+  background-color: #ffffff;
+  border: 3px solid $color-secondary;
+  opacity: 1;
+}
+
+.slider-points__link:not(.slider-points__link--active):hover::before,
+.slider-points__link:not(.slider-points__link--active):focus::before {
+  opacity: 0.6;
+}
+
+.slider-points__link:not(.slider-points__link--active):active::before {
+  opacity: 0.1;
+}
