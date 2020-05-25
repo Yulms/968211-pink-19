@@ -1,0 +1,160 @@
+.post {
+  margin: 0;
+
+  @include media-breakpoint-up(tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.post__image-link {
+  display: block;
+}
+
+.post__image-wrapper {
+  margin: 0;
+}
+
+.post--pan .post__image-wrapper {
+  @include full-width();
+
+  @include media-breakpoint-up(tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.post__image {
+  display: block;
+}
+
+.post--pan .post__image {
+  height: 100%;
+  max-width: none;
+
+  @include media-breakpoint-only(tablet) {
+    min-height: 509px;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    min-height: 506px;
+  }
+}
+
+.post__info {
+  background-color: $color-background;
+
+  @include media-breakpoint-only(mobile) {
+    padding: 18px 18px 8px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    padding: 24px 27px 10px;
+    flex-grow: 1;
+  }
+}
+
+.post:not(.post--pan) .post__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post--pan .post__info {
+  @include media-breakpoint-up(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px 25px;
+  }
+
+}
+
+.post--pan .post__header {
+  @include media-breakpoint-only(mobile) {
+    margin-bottom: 11px;
+  }
+}
+
+.post__author {
+  font-weight: 700;
+}
+
+.post__time {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.post__text {
+  margin: 0;
+  // костыль для pp
+  letter-spacing: -0.014em;
+}
+
+.post:not(.post--pan) .post__text {
+  @include media-breakpoint-up(tablet) {
+    margin-bottom: auto;
+  }
+}
+
+.post--pan .post__text {
+  order: 2;
+  flex: 0 0 100%;
+  margin-top: -12px;
+}
+
+.post__footer {
+  display: flex;
+  align-items: center;
+  color: $color-primary;
+
+  @include media-breakpoint-only(mobile) {
+    margin: -3px 0 0 -17px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    justify-content: space-between;
+  }
+}
+
+.post--pan .post__footer {
+  @include media-breakpoint-only(mobile) {
+    margin-top: -2px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    order: 1;
+    margin-right: -16px;
+  }
+}
+
+.post__like-button {
+  flex-shrink: 0;
+  padding: 18px 17px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  @include media-breakpoint-up(tablet) {
+    order: 1;
+  }
+}
+
+.post:not(.post--pan) .post__like-button {
+  @include media-breakpoint-up(tablet) {
+    transform: translateX(12px);
+  }
+}
+
+.post__like-icon {
+  display: block;
+  fill: currentColor;
+}
+
+.post__liked-stats {
+  text-transform: uppercase;
+  font-size: 12px;
+}
