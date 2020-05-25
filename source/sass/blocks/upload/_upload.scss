@@ -1,4 +1,8 @@
-.upload {}
+.upload {
+  @include media-breakpoint-up(desktop) {
+    padding-bottom: 28px;
+  }
+}
 
 .upload__intro {
   text-align: center;
@@ -25,12 +29,7 @@
 .upload__inner {
   @include media-breakpoint-only(mobile) {
     padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  @include media-breakpoint-only(mobile) {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   @include media-breakpoint-only(tablet) {
