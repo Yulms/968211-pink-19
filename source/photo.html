@@ -415,8 +415,114 @@
 
         </div>
 
-
       </div>
+    </section>
+
+    <section class="upload">
+      <h2 class="visually-hidden">Загрузка своих фотографий</h2>
+
+      <div class="wrapper">
+        <div class="upload__intro">
+          <p class="upload__intro-text">Затмите их всех!<br>
+            Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </div>
+
+      <div class="upload__container">
+        <div class="wrapper">
+          <div class="upload__inner">
+
+            <p class="upload__image-wrapper">
+              <picture>
+                <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/photo-road-desktop@1x.webp 1x, img/raster/photo-road-desktop@2x.webp 2x">
+                <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/photo-road-tablet@1x.webp 1x, img/raster/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/raster/photo-road-mobile@1x.webp 1x, img/raster/photo-road-mobile@2x.webp 2x">
+
+                <source media="(min-width: 960px)" srcset="img/raster/photo-road-desktop@1x.jpg 1x, img/raster/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/raster/photo-road-tablet@1x.jpg 1x, img/raster/photo-road-tablet@2x.jpg 2x">
+                <img class="upload__image" src="img/raster/photo-road-mobile@1x.jpg" srcset="img/raster/photo-road-mobile@2x.jpg 2x" loading="lazy" alt="Подпись к изображению">
+              </picture>
+            </p>
+
+            <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="upload__fieldset">
+
+                <legend class="visually-hidden">Настройки изображений</legend>
+
+                <div class="upload__fieldset-flex">
+                  <ul class="upload__controls-list">
+
+                    <li class="upload__controls-item">
+                      <button class="upload__button-iconized upload__button-iconized--active" type="button">
+                        <span class="visually-hidden">Активировать ползунок кропа</span>
+                        <svg class="upload__icon upload__icon--crop" aria-hidden="true" width="44" height="44">
+                          <use xlink:href="img/svg/_sprite.svg#icon-editor-crop"></use>
+                        </svg>
+                      </button>
+                      <div class="range-slider range-slider--active upload__slider upload__slider-active">
+                        <div class="range-slider__bar">
+                          <div class="range-slider__bar-inner">
+                            <button class="range-slider__button" type="button">
+                              <div class="range-slider__point"></div>
+                              <span class="visually-hidden">Управление ползунком</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="upload__controls-item">
+                      <button class="upload__button-iconized" type="button">
+                        <span class="visually-hidden">Активировать ползунок яркости</span>
+                        <svg class="upload__icon upload__icon--fill" aria-hidden="true" width="48" height="43">
+                          <use xlink:href="img/svg/_sprite.svg#icon-editor-fill"></use>
+                        </svg>
+                      </button>
+                      <div class="range-slider upload__slider">
+                        <div class="range-slider__bar">
+                          <div class="range-slider__bar-inner">
+                            <button class="range-slider__button" type="button">
+                              <div class="range-slider__point"></div>
+                              <span class="visually-hidden">Управление ползунком</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="upload__controls-item">
+                      <button class="upload__button-iconized" type="button">
+                        <span class="visually-hidden">Активировать ползунок контрастности</span>
+                        <svg class="upload__icon upload__icon--contrast" aria-hidden="true" width="32" height="32">
+                          <use xlink:href="img/svg/_sprite.svg#icon-editor-contrast"></use>
+                        </svg>
+                      </button>
+                      <div class="range-slider upload__slider">
+                        <div class="range-slider__bar">
+                          <div class="range-slider__bar-inner">
+                            <button class="range-slider__button" type="button">
+                              <div class="range-slider__point"></div>
+                              <span class="visually-hidden">Управление ползунком</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="upload__submit-container">
+                    <button class="button button--upload upload__button" type="submit">Запостить</button>
+                    <button class="button button--cancel upload__button" type="button">Отмена</button>
+                  </div>
+                </div>
+
+              </fieldset>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </main>
