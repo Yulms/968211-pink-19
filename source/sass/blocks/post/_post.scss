@@ -4,6 +4,7 @@
   @include media-breakpoint-up(tablet) {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -26,6 +27,7 @@
 
 .post__image {
   display: block;
+  width: 100%;
 }
 
 .post--pan .post__image {
@@ -141,6 +143,8 @@
   @include media-breakpoint-up(tablet) {
     order: 1;
   }
+
+  @include hover-effects();
 }
 
 .post:not(.post--pan) .post__like-button {

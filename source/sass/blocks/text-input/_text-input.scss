@@ -1,7 +1,4 @@
 .text-input {
-  // для позиционирования иконки
-  position: relative;
-  z-index: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -13,6 +10,13 @@
   color: $color-primary;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.text-input__icon-positioner {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  width: 100%;
 }
 
 .text-input__icon-wrapper {
@@ -41,7 +45,6 @@
 }
 
 .text-input__field {
-  flex-basis: 300px;
   flex-grow: 1;
   margin: 0;
   padding: 15px 20px 14px;
@@ -72,15 +75,7 @@
   resize: none;
   // disable scroll in ie
   overflow: auto;
-  border: 2px solid $color-text-base;
-
-  @media (max-width: $mobile-only) {
-    padding: 14px 18px;
-  }
-
-  @media (min-width: $tablet) {
-    padding: 10px 14px;
-  }
+  padding: 14px 19px;
 }
 
 .text-input__field--iconised {

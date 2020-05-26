@@ -25,7 +25,7 @@
 }
 
 .radiocheck__box--radio {
-  width: 39px;
+  width: 40px;
   height: 39px;
   border-radius: 50%;
 }
@@ -38,6 +38,7 @@
 
 .radiocheck__caption {
   transform: translateY(4px);
+  word-break: break-word;
 }
 
 .radiocheck__input:hover:not(:disabled)+.radiocheck__box {

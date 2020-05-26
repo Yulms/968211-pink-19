@@ -85,6 +85,7 @@
 
 .upload__image {
   display: block;
+  width: 100%;
 
   @include media-breakpoint-only(mobile) {
     margin-bottom: 41px;

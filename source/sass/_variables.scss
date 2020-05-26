@@ -18,13 +18,13 @@ $mobile-column-width: 100% / $mobile-column-count;
 $tablet-column-width: 100% / $tablet-column-count;
 $desktop-column-width: 100% / $desktop-column-count;
 
-$mobile-max-width: 320px;
-$tablet-max-width: 660px;
-$desktop-max-width: 960px;
+// $mobile-max-width: 320px;
+// $tablet-max-width: 660px;
+// $desktop-max-width: 960px;
 
-// $mobile-max-width: 700px;
-// $tablet-max-width: 1000px;
-// $desktop-max-width: 1500px;
+$mobile-max-width: 460px;
+$tablet-max-width: 800px;
+$desktop-max-width: 1200px;
 
 $color-primary: #d22856;
 $color-primary--darker: #d4345f;
