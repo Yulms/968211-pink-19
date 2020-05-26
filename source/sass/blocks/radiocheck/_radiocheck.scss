@@ -1,90 +1,53 @@
 .radiocheck {
   display: flex;
-  line-height: 18px;
-  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
   color: $color-text-base;
-  white-space: normal;
-
-  @media (max-width: $mobile-only) {
-    font-size: 17px;
-  }
-
-  @media (min-width: $tablet) {
-    font-size: 19px;
-  }
 }
 
 .radiocheck__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+  @include visually-hidden();
 }
 
 .radiocheck__box {
   position: relative;
   flex-shrink: 0;
-  background-color: transparent;
+  background-color: white;
   border: 2px solid $color-controls;
 
   @media (max-width: $mobile-only) {
-    margin-right: 24px;
+    margin-right: 31px;
   }
 
   @media (min-width: $tablet) {
-    margin-right: 27px;
+    margin-right: 23px;
   }
 }
 
 .radiocheck__box--radio {
+  width: 39px;
+  height: 39px;
   border-radius: 50%;
-
-  @media (max-width: $mobile-only) {
-    width: 40px;
-    height: 40px;
-  }
-
-  @media (min-width: $tablet) {
-    width: 52px;
-    height: 53px;
-  }
 }
 
 .radiocheck__box--check {
-  @media (max-width: $mobile-only) {
-    width: 40px;
-    height: 39px;
-  }
-
-  @media (min-width: $tablet) {
-    width: 54px;
-    height: 52px;
-  }
+  width: 39px;
+  height: 39px;
+  border-radius: 2px;
 }
 
 .radiocheck__caption {
-  position: relative;
-
-  @media (max-width: $mobile-only) {
-    top: 10px;
-  }
-
-  @media (min-width: $tablet) {
-    top: 15px;
-  }
+  transform: translateY(4px);
 }
 
-.radiocheck__input:hover:not(:disabled)+.radiocheck__box,
-.radiocheck__input:focus:not(:disabled)+.radiocheck__box {
-  border-color: $color-primary;
+.radiocheck__input:hover:not(:disabled)+.radiocheck__box {
+  border-color: $color-secondary;
 }
 
+
+.radiocheck__input:focus:not(:disabled)+.radiocheck__box,
 .radiocheck__input:active:not(:disabled)+.radiocheck__box {
-  border-color: rgba($color-controls, 0.3);
+  border-color: $color-primary;
 }
 
 .radiocheck__input:checked+.radiocheck__box--radio::after {
@@ -93,15 +56,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: $color-primary;
-
-  @media (min-width: $tablet) {
-    width: 22px;
-    height: 22px;
-  }
 }
 
 .radiocheck__input:checked+.radiocheck__box--check::after {
@@ -112,15 +70,9 @@
   transform: translate(-50%, -50%);
   width: 22px;
   height: 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.7' height='16.09' version='1.0' viewBox='-82.36 4.88 21.7 16.09'%3E%3Cpath d='M-60.95 5.17a1 1 0 00-1.42 0l-13.38 13.38-4.9-4.9a1 1 0 10-1.41 1.41l5.6 5.61a1 1 0 001.42 0l14.09-14c.39-.48.39-1.11 0-1.5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='21.7' height='16.1' viewBox='-82.4 4.9 21.7 16.1' fill='%23d22856'%3E%3Cpath d='M-61 5.2a1 1 0 00-1.4 0l-13.4 13.4-4.9-5a1 1 0 10-1.4 1.5l5.6 5.6a1 1 0 001.5 0l14-14c.4-.5.4-1.1 0-1.5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-
-  @media (min-width: $tablet) {
-    width: 33px;
-    height: 22px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.67' height='22.74'%3E%3Cpath d='M32.67 1.41L31.25 0 11.34 19.91 1.4 10 0 11.4l9.92 9.93 1.42 1.41 1.41-1.41z'/%3E%3C/svg%3E%0A");
-  }
 }
 
 .radiocheck__input:disabled+.radiocheck__box,

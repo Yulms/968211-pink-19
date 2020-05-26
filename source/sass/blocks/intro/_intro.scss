@@ -1,0 +1,30 @@
+.intro {
+  text-align: center;
+
+  @include media-breakpoint-only(mobile) {
+    padding: 45px 0 0;
+  }
+
+  @include media-breakpoint-only(tablet) {
+    padding: 92px 25px 0;
+  }
+
+  @include media-breakpoint-up(desktop) {
+    padding: 92px 100px 0;
+  }
+}
+
+.intro__text {
+  margin: 0;
+  line-height: 30px;
+
+  @include media-breakpoint-up(tablet) {
+    font-size: 18px;
+  }
+}
+
+.intro__mobile-hidden {
+  @include media-breakpoint-only(mobile) {
+    @include visually-hidden();
+  }
+}
