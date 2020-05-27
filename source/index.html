@@ -46,7 +46,6 @@
         background-position: 50% 0;
       }
     }
-
   </style>
   <link href="mockups/pixel-glass/styles.css" rel="stylesheet">
   <script src="mockups/pixel-glass/script.js"></script> -->
@@ -217,7 +216,7 @@
           </li>
         </ul>
 
-        <ul class="slider-points slider-points__list reviews__slider-points">
+        <ul class="slider-points reviews__slider-points">
           <li class="slider-points__item">
             <a class="slider-points__link slider-points__link--active" href=""><span class="visually-hidden">Перейти к отзыву 1</span></a>
           </li>
@@ -233,8 +232,8 @@
           <li class="reviews__item">
             <blockquote class="reviews__one-review">
               <cite class="reviews__author">
-                <div class="reviews__author-name">Николай Петров</div>
-                <div class="reviews__author-details">25 лет, водитель трамвая</div>
+                <span class="reviews__author-name">Николай Петров</span>
+                <span class="reviews__author-details">25 лет, водитель трамвая</span>
               </cite>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
@@ -358,7 +357,7 @@
             </tbody>
           </table>
         </div>
-        <ul class="slider-points slider-points__list price__slider-points">
+        <ul class="slider-points price__slider-points">
           <li class="slider-points__item">
             <a class="slider-points__link" href=""><span class="visually-hidden">Перейти первому тарифу</span></a>
           </li>
@@ -394,22 +393,19 @@
         </div>
       </div>
 
-      <div class="contacts__map decorative decorative--triangle" id="map"></div>
-
-      <noscript>
+      <div class="contacts__map decorative decorative--triangle" id="map">
         <div class="contacts__map-img">
           <picture>
-            <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/bg-map-desktop@1x.webp 1200w, img/raster/bg-map-desktop@2x.webp 2400w">
-            <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/bg-map-tablet@1x.webp 700w, img/raster/bg-map-tablet@2x.webp 1400w">
-            <source type="image/webp" srcset="img/raster/bg-map-mobile@1x.webp 320w, img/raster/bg-map-mobile@2x.webp 640w">
+            <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/bg-map-desktop@1x.webp 1x, img/raster/bg-map-desktop@2x.webp 2x">
+            <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/bg-map-tablet@1x.webp 1x, img/raster/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/raster/bg-map-mobile@1x.webp 1x, img/raster/bg-map-mobile@2x.webp 2x">
 
-            <source media="(min-width: 960px)" srcset="img/raster/bg-map-desktop@1x.jpg 1200w, img/raster/bg-map-desktop@2x.jpg 2400w">
-            <source media="(min-width: 660px)" srcset="img/raster/bg-map-tablet@1x.jpg 700w, img/raster/bg-map-tablet@2x.jpg 1400w">
-            <img class="contacts__map-image" src="img/raster/bg-map-mobile@1x.jpg" srcset="img/raster/bg-map-mobile@2x.jpg 640w" loading="lazy" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+            <source media="(min-width: 960px)" srcset="img/raster/bg-map-desktop@1x.jpg 1x, img/raster/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/raster/bg-map-tablet@1x.jpg 1x, img/raster/bg-map-tablet@2x.jpg 2x">
+            <img class="contacts__map-image" src="img/raster/bg-map-mobile@1x.jpg" srcset="img/raster/bg-map-mobile@2x.jpg 2x" loading="lazy" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
           </picture>
         </div>
-      </noscript>
-
+      </div>
     </section>
 
   </main>
@@ -418,7 +414,7 @@
     <div class="wrapper footer__wrapper">
       <a class="logo logo--footer footer__logo" href="/" title="" aria-label="Перейти на главную страницу">
 
-        <svg class="logo__image logo__image--tablet" aria-hidden="true" width="147" height="40">
+        <svg class="logo__image logo__image--mobile logo__image--tablet" aria-hidden="true" width="147" height="40">
           <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-mobile"></use>
         </svg>
 

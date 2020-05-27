@@ -217,6 +217,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $color-primary;
+  text-align: center;
 
   @media (max-width: $mobile-only) {
     margin-bottom: 39px;
@@ -420,7 +421,7 @@
   text-transform: uppercase;
 }
 
-.form__footnote--no-matter {
+.form__footnote-no-matter {
   @media (max-width: $tablet-only) {
     display: none;
   }

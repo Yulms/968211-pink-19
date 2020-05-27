@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin="">
 
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
     html {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -51,7 +51,7 @@
     }
   </style>
   <link href="mockups/pixel-glass/styles.css" rel="stylesheet">
-  <script src="mockups/pixel-glass/script.js"></script>
+  <script src="mockups/pixel-glass/script.js"></script> -->
   <!-- Pixel Glass -->
 </head>
 
@@ -127,17 +127,18 @@
         <div class="gallery__layout">
 
           <article class="gallery__layout-item gallery__layout-item--pan">
+            <h3 class="visually-hidden">Прыгать или нет?</h3>
             <figure class="post post--pan">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
                   <picture>
-                    <source media="(min-width: 960px)" type="image/webp" srcset="img/raster/panorama-desktop@1x.webp 1200w, img/raster/panorama-desktop@2x.webp 2400w">
-                    <source media="(min-width: 660px)" type="image/webp" srcset="img/raster/panorama-tablet@1x.webp 700w, img/raster/panorama-tablet@2x.webp 1400w">
-                    <source type="image/webp" srcset="img/raster/panorama-mobile@1x.webp 320w, img/raster/panorama-mobile@2x.webp 640w">
+                    <source media="(min-width: 960px)" sizes="100vw" type="image/webp" srcset="img/raster/panorama-desktop@1x.webp 1200w, img/raster/panorama-desktop@2x.webp 2400w">
+                    <source media="(min-width: 660px)" sizes="100vw" type="image/webp" srcset="img/raster/panorama-tablet@1x.webp 700w, img/raster/panorama-tablet@2x.webp 1400w">
+                    <source type="image/webp" sizes="100vw" srcset="img/raster/panorama-mobile@1x.webp 320w, img/raster/panorama-mobile@2x.webp 640w">
 
-                    <source media="(min-width: 960px)" srcset="img/raster/panorama-desktop@1x.jpg 1200w, img/raster/panorama-desktop@2x.jpg 2400w">
-                    <source media="(min-width: 660px)" srcset="img/raster/panorama-tablet@1x.jpg 700w, img/raster/panorama-tablet@2x.jpg 1400w">
-                    <img class="post__image" src="img/raster/panorama-mobile@1x.jpg" srcset="img/raster/panorama-mobile@2x.jpg 640w" alt="Подпись к изображению">
+                    <source media="(min-width: 960px)" sizes="100vw" srcset="img/raster/panorama-desktop@1x.jpg 1200w, img/raster/panorama-desktop@2x.jpg 2400w">
+                    <source media="(min-width: 660px)" sizes="100vw" srcset="img/raster/panorama-tablet@1x.jpg 700w, img/raster/panorama-tablet@2x.jpg 1400w">
+                    <img class="post__image" sizes="100vw" src="img/raster/panorama-mobile@1x.jpg" srcset="img/raster/panorama-mobile@2x.jpg 640w" alt="Подпись к изображению">
                   </picture>
                 </p>
               </a>
@@ -169,6 +170,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">Космические технологии</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -210,6 +212,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">Купил барабаны</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -251,6 +254,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">О высоком</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -292,6 +296,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">Кубанская бахча</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -333,6 +338,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">Где-то в горах</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -374,6 +380,7 @@
           </article>
 
           <article class="gallery__layout-item">
+            <h3 class="visually-hidden">Летим</h3>
             <figure class="post">
               <a class="post__image-link" href="#">
                 <p class="post__image-wrapper">
@@ -464,7 +471,7 @@
                         <div class="range-slider__bar">
                           <div class="range-slider__bar-inner" style="width: 27%;">
                             <button class="range-slider__button" type="button">
-                              <div class="range-slider__point"></div>
+                              <span class="range-slider__point"></span>
                               <span class="visually-hidden">Управление ползунком</span>
                             </button>
                           </div>
@@ -483,7 +490,7 @@
                         <div class="range-slider__bar">
                           <div class="range-slider__bar-inner" style="width: 88%;">
                             <button class="range-slider__button" type="button">
-                              <div class="range-slider__point"></div>
+                              <span class="range-slider__point"></span>
                               <span class="visually-hidden">Управление ползунком</span>
                             </button>
                           </div>
@@ -502,7 +509,7 @@
                         <div class="range-slider__bar">
                           <div class="range-slider__bar-inner" style="width: 58%;">
                             <button class="range-slider__button" type="button">
-                              <div class="range-slider__point"></div>
+                              <span class="range-slider__point"></span>
                               <span class="visually-hidden">Управление ползунком</span>
                             </button>
                           </div>
@@ -513,7 +520,7 @@
 
                   <div class="upload__submit-container">
                     <button class="button button--upload upload__button" type="submit">Запостить</button>
-                    <button class="button button--cancel upload__button js--reset-tune" type="reset">Отмена</button>
+                    <button class="button button--cancel upload__button" type="reset">Отмена</button>
                   </div>
                 </div>
 
@@ -532,7 +539,7 @@
     <div class="wrapper footer__wrapper">
       <a class="logo logo--footer footer__logo" href="/" title="" aria-label="Перейти на главную страницу">
 
-        <svg class="logo__image logo__image--tablet" aria-hidden="true" width="147" height="40">
+        <svg class="logo__image logo__image--mobile logo__image--tablet" aria-hidden="true" width="147" height="40">
           <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-mobile"></use>
         </svg>
 
