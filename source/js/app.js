@@ -1,5 +1,7 @@
 "use strict";
 
+// Меню
+
 var nav = document.querySelector(".header");
 var navToggle = document.querySelector(".header__nav-toggle");
 
@@ -22,6 +24,21 @@ if (nav && navToggle) {
 
 
 
+// Переключение ползунков фото
+
+var btnTunePhoto = document.querySelectorAll(".upload__button-tune");
+for (var i = 0; i < btnTunePhoto.length; i++) {
+  btnTunePhoto[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    // удаляем уктивные классы со всего
+    document.querySelector(".upload__button-tune--active").classList.remove("upload__button-tune--active");
+    document.querySelector(".range-slider--active").classList.remove("range-slider--active");
+
+    // добавляем активные классы целевым элементам
+    this.classList.add("upload__button-tune--active");
+    this.nextElementSibling.classList.add("range-slider--active");
+  });
+};
 
 
 
@@ -29,9 +46,18 @@ if (nav && navToggle) {
 
 
 
-// 0. Пишем код открытия и закрытия модальных окон
+
+
+// Форма
+
+var btnForm = document.querySelector(".button--form-send");
 var modalWindow;
 var btnClose;
+// поля для упрощенной валидации (только наличие инфы в полях)
+var surnameField = document.getElementById("surname-field");
+var nameField = document.getElementById("name-field");
+var phoneField = document.getElementById("phone-field");
+var emailField = document.getElementById("email-field");
 
 // Функция открытия модальных окон
 function showModal(evt, modalClass) {
@@ -55,21 +81,15 @@ window.addEventListener("keydown", function (evt) {
   };
 });
 
-// упрощенная валидация (только наличие инфы в полях)
-var surnameField = document.getElementById("surname-field");
-var nameField = document.getElementById("name-field");
-var phoneField = document.getElementById("phone-field");
-var emailField = document.getElementById("email-field");
-
+// Валидация полей
 function validateFormFields() {
   if (surnameField.value && nameField.value && phoneField.value && emailField.value) {
     return true;
   };
 };
 
-var btnForm = document.querySelector(".button--form-send");
+// Отработка отправки формы
 if (btnForm) {
-
   btnForm.addEventListener("click", function (evt) {
     evt.preventDefault();
     // 1. Проверяем валидность введенных данных
@@ -82,10 +102,6 @@ if (btnForm) {
     };
   });
 };
-
-
-
-
 
 
 

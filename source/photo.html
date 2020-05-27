@@ -453,15 +453,15 @@
                   <ul class="upload__controls-list">
 
                     <li class="upload__controls-item">
-                      <button class="upload__button-iconized upload__button-iconized--active" type="button">
+                      <button class="upload__button-tune upload__button-tune--active" type="button">
                         <span class="visually-hidden">Активировать ползунок кропа</span>
                         <svg class="upload__icon upload__icon--crop" aria-hidden="true" width="44" height="44">
                           <use xlink:href="img/svg/_sprite.svg#icon-editor-crop"></use>
                         </svg>
                       </button>
-                      <div class="range-slider range-slider--active upload__slider upload__slider-active">
+                      <div class="range-slider range-slider--active upload__slider">
                         <div class="range-slider__bar">
-                          <div class="range-slider__bar-inner">
+                          <div class="range-slider__bar-inner" style="width: 27%;">
                             <button class="range-slider__button" type="button">
                               <div class="range-slider__point"></div>
                               <span class="visually-hidden">Управление ползунком</span>
@@ -472,7 +472,7 @@
                     </li>
 
                     <li class="upload__controls-item">
-                      <button class="upload__button-iconized" type="button">
+                      <button class="upload__button-tune" type="button">
                         <span class="visually-hidden">Активировать ползунок яркости</span>
                         <svg class="upload__icon upload__icon--fill" aria-hidden="true" width="48" height="43">
                           <use xlink:href="img/svg/_sprite.svg#icon-editor-fill"></use>
@@ -480,7 +480,7 @@
                       </button>
                       <div class="range-slider upload__slider">
                         <div class="range-slider__bar">
-                          <div class="range-slider__bar-inner">
+                          <div class="range-slider__bar-inner" style="width: 88%;">
                             <button class="range-slider__button" type="button">
                               <div class="range-slider__point"></div>
                               <span class="visually-hidden">Управление ползунком</span>
@@ -491,7 +491,7 @@
                     </li>
 
                     <li class="upload__controls-item">
-                      <button class="upload__button-iconized" type="button">
+                      <button class="upload__button-tune" type="button">
                         <span class="visually-hidden">Активировать ползунок контрастности</span>
                         <svg class="upload__icon upload__icon--contrast" aria-hidden="true" width="32" height="32">
                           <use xlink:href="img/svg/_sprite.svg#icon-editor-contrast"></use>
@@ -499,7 +499,7 @@
                       </button>
                       <div class="range-slider upload__slider">
                         <div class="range-slider__bar">
-                          <div class="range-slider__bar-inner">
+                          <div class="range-slider__bar-inner" style="width: 58%;">
                             <button class="range-slider__button" type="button">
                               <div class="range-slider__point"></div>
                               <span class="visually-hidden">Управление ползунком</span>
@@ -512,7 +512,7 @@
 
                   <div class="upload__submit-container">
                     <button class="button button--upload upload__button" type="submit">Запостить</button>
-                    <button class="button button--cancel upload__button" type="button">Отмена</button>
+                    <button class="button button--cancel upload__button js--reset-tune" type="reset">Отмена</button>
                   </div>
                 </div>
 
