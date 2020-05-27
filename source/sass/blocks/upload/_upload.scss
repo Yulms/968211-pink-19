@@ -222,8 +222,6 @@
   fill: $color-primary;
 }
 
-.upload__button-tune .upload__icon {}
-
 .upload__slider {
   @media (max-width: $mobile-only) {
     display: none;
@@ -234,7 +232,7 @@
   }
 }
 
-.upload__button-tune--active+.upload__slider {
+.upload__button-tune--active + .upload__slider {
   @media (max-width: $mobile-only) {
     display: block;
     position: absolute;
@@ -245,13 +243,11 @@
 }
 
 .upload__submit-container {
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: $mobile-only) {
     border-top: 1px solid #dddfe0;
-  }
-
-  @include media-breakpoint-up(mobile) {
-    display: flex;
-    flex-direction: column;
   }
 
   @media (max-width: $mobile-only) {

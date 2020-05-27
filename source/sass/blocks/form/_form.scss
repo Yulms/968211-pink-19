@@ -241,7 +241,7 @@
 
 .form__legend--contacts {
   @media (max-width: $mobile-only) {
-    @include visually-hidden()
+    @include visually-hidden;
   }
 }
 
@@ -347,10 +347,8 @@
 }
 
 .form__section--radios .form__item {
-  @include media-breakpoint-up(mobile) {
-    &:not(:last-child) {
-      margin-bottom: 36px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 36px;
   }
 }
 

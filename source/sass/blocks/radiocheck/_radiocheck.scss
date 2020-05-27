@@ -41,17 +41,17 @@
   word-break: break-word;
 }
 
-.radiocheck__input:hover:not(:disabled)+.radiocheck__box {
+.radiocheck__input:hover:not(:disabled) + .radiocheck__box {
   border-color: $color-secondary;
 }
 
 
-.radiocheck__input:focus:not(:disabled)+.radiocheck__box,
-.radiocheck__input:active:not(:disabled)+.radiocheck__box {
+.radiocheck__input:focus:not(:disabled) + .radiocheck__box,
+.radiocheck__input:active:not(:disabled) + .radiocheck__box {
   border-color: $color-primary;
 }
 
-.radiocheck__input:checked+.radiocheck__box--radio::after {
+.radiocheck__input:checked + .radiocheck__box--radio::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -63,7 +63,7 @@
   background-color: $color-primary;
 }
 
-.radiocheck__input:checked+.radiocheck__box--check::after {
+.radiocheck__input:checked + .radiocheck__box--check::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -76,7 +76,7 @@
   background-position: 50% 50%;
 }
 
-.radiocheck__input:disabled+.radiocheck__box,
-.radiocheck__input:disabled~.radiocheck__caption {
+.radiocheck__input:disabled + .radiocheck__box,
+.radiocheck__input:disabled ~ .radiocheck__caption {
   opacity: 0.4;
 }

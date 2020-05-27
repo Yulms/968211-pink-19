@@ -1,6 +1,5 @@
 // Эффекты наведения, непрорисованные в дизайне
 @mixin hover-effects {
-
   &:hover,
   &:focus {
     opacity: 0.7;
@@ -12,7 +11,6 @@
 }
 
 @mixin hover-effects--light {
-
   &:hover,
   &:focus {
     opacity: 0.9;
