@@ -128,8 +128,8 @@
 }
 
 .contacts__map {
-  // position: relative;
-  // z-index: 0;
+  position: relative;
+  z-index: 0;
   overflow: hidden;
 
   @media (max-width: $mobile-only) {
@@ -146,17 +146,11 @@
 }
 
 .contacts__map-img {
-  @media (max-width: $mobile-only) {
-    margin-top: -200px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $tablet-only) {
-    margin-top: -374px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-top: -480px;
-  }
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .contacts__map-image {

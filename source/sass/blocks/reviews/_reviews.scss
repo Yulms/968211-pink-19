@@ -74,7 +74,7 @@
 }
 
 .reviews__author-name {
-  margin: 0;
+  display: block;
   font-weight: 700;
 
   @media (max-width: $mobile-only) {
@@ -93,7 +93,7 @@
 }
 
 .reviews__author-details {
-  margin: 0;
+  display: block;
 
   @media (max-width: $mobile-only) {
     display: none;

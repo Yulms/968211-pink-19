@@ -64,7 +64,7 @@ function showModal(evt, modalClass) {
   modalWindow = document.querySelector(modalClass);
 
   // Добавляем события закрытия на кнопку закрытия внутри этого модального окна
-  btnClose = document.querySelector(modalClass + " .js--modal-close");
+  btnClose = document.querySelector(modalClass + " .modal__close-button");
   btnClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalWindow.classList.add("modal--closed");

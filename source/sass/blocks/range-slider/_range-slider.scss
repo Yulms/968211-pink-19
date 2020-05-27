@@ -26,10 +26,11 @@
 }
 
 .range-slider__point {
+  display: block;
   width: 14px;
   height: 15px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: $color-background;
   border-radius: 50%;
   border: 2px solid $color-primary;
   transition: 0.3s;
@@ -41,9 +42,5 @@
 }
 
 .range-slider__button:active .range-slider__point {
-  opacity: 0.6;
-}
-
-.range-slider--active .range-slider__point {
   background-color: $color-primary;
 }
