@@ -30,14 +30,20 @@
   }
 
   @include media-breakpoint-only(tablet) {
-    flex: 0 0 50%;
     min-height: 474px;
+    // flex: 0 0 50%;
+    // для IE11 тоже самое в 2 строки:
+    flex-shrink: 0;
+    width: 50%;
   }
 
   @include media-breakpoint-up(desktop) {
-    padding: 54px 0 0 20px;
-    flex: 0 0 33.3333%;
     min-height: 609px;
+    padding: 54px 0 0 20px;
+    // flex: 0 0 33.3333%;
+    // для IE11 тоже самое в 2 строки:
+    flex-shrink: 0;
+    width: 33.3333%;
   }
 }
 

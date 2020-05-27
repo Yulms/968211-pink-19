@@ -97,14 +97,20 @@
 
 .form__section--fio {
   @include media-breakpoint-up(desktop) {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
+    // ie11
+    width: 50%;
+    flex-shrink: 0;
     padding-right: 35px;
   }
 }
 
 .form__section--radios {
   @include media-breakpoint-up(desktop) {
-    flex: 0 0 50%;
+    // flex: 0 0 50%;
+    // ie11
+    width: 50%;
+    flex-shrink: 0;
     padding-left: 35px;
   }
 }
@@ -205,12 +211,12 @@
 }
 
 .form__legend {
+  margin: 0 auto;
   padding: 0;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: $color-primary;
-  text-align: center;
 
   @include media-breakpoint-only(mobile) {
     margin-bottom: 39px;
@@ -266,7 +272,6 @@
   }
 }
 
-// ?????????????????
 .form__item {
   @include media-breakpoint-only(mobile) {
     &:not(:last-child) {

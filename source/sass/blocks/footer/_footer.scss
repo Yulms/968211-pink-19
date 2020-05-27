@@ -1,6 +1,11 @@
 .footer {
   display: flex;
+}
+
+.footer__wrapper {
+  display: flex;
   align-items: center;
+  width: 100%;
 
   @include media-breakpoint-only(mobile) {
     flex-direction: column;

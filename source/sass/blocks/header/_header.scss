@@ -2,6 +2,16 @@
   position: relative;
   z-index: 1;
   min-height: 66px;
+  // for ie11 unbug
+  display: flex;
+
+  @include media-breakpoint-only(mobile) {
+    margin-bottom: -66px;
+  }
+
+  @include media-breakpoint-up(tablet) {
+    margin-bottom: -110px;
+  }
 }
 
 .header--nav-closed {
@@ -13,6 +23,8 @@
 }
 
 .header__wrapper {
+  width: 100%;
+
   @include media-breakpoint-down(tablet) {
     padding-left: 0;
     padding-right: 0;

@@ -1,9 +1,1 @@
-.main {
-  @include media-breakpoint-only(mobile) {
-    margin-top: -66px;
-  }
-
-  @include media-breakpoint-up(tablet) {
-    margin-top: -110px;
-  }
-}
+.main {}

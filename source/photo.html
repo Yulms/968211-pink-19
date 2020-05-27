@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Пинк</title>
-  <meta name="description" content="Магазин Мишка - лучшие поделки в подмосковье">
-  <meta name="keywords" content="поделки">
+  <meta name="description" content="PINK - выложи фотку за лайки">
+  <meta name="keywords" content="фотки">
   <!-- ассинхронная загрузка стилей с поддержкой IE. Preload для обеспечения приоритета загрузки в поддерживаещих его браузерах
   https://www.filamentgroup.com/lab/load-css-simpler/ -->
   <link rel="preload" as="style" href="css/style.min.css">
@@ -527,58 +527,64 @@
 
   </main>
 
-  <footer class="footer wrapper">
-    <a class="logo logo--footer footer__logo" href="/" title="" aria-label="Перейти на главную страницу">
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+      <a class="logo logo--footer footer__logo" href="/" title="" aria-label="Перейти на главную страницу">
 
-      <svg class="logo__image logo__image--mobile logo__image--tablet" aria-hidden="true" width="147" height="40">
-        <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-mobile"></use>
-      </svg>
-
-      <svg class="logo__image logo__image--desktop" aria-hidden="true" width="147" height="40">
-        <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-desktop"></use>
-      </svg>
-
-    </a>
-
-    <ul class="footer__socials-list">
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#" title="">
-          <svg class="footer__socials-icon" aria-hidden="true" width="18" height="14">
-            <use xlink:href="img/svg/_sprite.svg#icon-twitter"></use>
-          </svg>
-          <span class="visually-hidden">Наш твиттер</span>
-        </a>
-      </li>
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#" title="">
-          <svg class="footer__socials-icon" aria-hidden="true" width="9" height="18">
-            <use xlink:href="img/svg/_sprite.svg#icon-facebook"></use>
-          </svg>
-          <span class="visually-hidden">Наш твиттер</span>
-        </a>
-      </li>
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#" title="">
-          <svg class="footer__socials-icon" aria-hidden="true" width="15" height="13">
-            <use xlink:href="img/svg/_sprite.svg#icon-youtube"></use>
-          </svg>
-          <span class="visually-hidden">Наш твиттер</span>
-        </a>
-      </li>
-    </ul>
-
-    <div class="footer__copyright">
-      <b class="footer__copyright-text">Разработано</b>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посмотреть информацию на сайте Академии">
-        <svg class="footer__copyright-logo" width="27" height="34">
-          <use xlink:href="img/svg/_sprite.svg#logo-htmlacademy"></use>
+        <svg class="logo__image logo__image--tablet" aria-hidden="true" width="147" height="40">
+          <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-mobile"></use>
         </svg>
-        <span class="visually-hidden">HTML Academy</span>
+
+        <svg class="logo__image logo__image--desktop" aria-hidden="true" width="147" height="40">
+          <use xlink:href="img/svg/_sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
+
       </a>
+
+      <ul class="footer__socials-list">
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" title="">
+            <svg class="footer__socials-icon" aria-hidden="true" width="18" height="14">
+              <use xlink:href="img/svg/_sprite.svg#icon-twitter"></use>
+            </svg>
+            <span class="visually-hidden">Наш твиттер</span>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" title="">
+            <svg class="footer__socials-icon" aria-hidden="true" width="9" height="18">
+              <use xlink:href="img/svg/_sprite.svg#icon-facebook"></use>
+            </svg>
+            <span class="visually-hidden">Наш твиттер</span>
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="#" title="">
+            <svg class="footer__socials-icon" aria-hidden="true" width="15" height="13">
+              <use xlink:href="img/svg/_sprite.svg#icon-youtube"></use>
+            </svg>
+            <span class="visually-hidden">Наш твиттер</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__copyright">
+        <b class="footer__copyright-text">Разработано</b>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посмотреть информацию на сайте Академии">
+          <svg class="footer__copyright-logo" width="27" height="34">
+            <use xlink:href="img/svg/_sprite.svg#logo-htmlacademy"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
     </div>
   </footer>
 
   <script src="js/all.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
 </body>
 
 </html>

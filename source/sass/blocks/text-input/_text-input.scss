@@ -45,6 +45,7 @@
 }
 
 .text-input__field {
+  height: 63px;
   flex-grow: 1;
   margin: 0;
   padding: 15px 20px 14px;
@@ -58,7 +59,7 @@
   background-color: #ffffff;
   outline: 0;
 
-  & ::placeholder {
+  &::placeholder {
     color: $color-text-base;
   }
 

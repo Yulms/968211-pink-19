@@ -37,6 +37,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  max-width: 100%;
 
   @include media-breakpoint-down(tablet) {
     margin-bottom: 26px;
@@ -109,6 +110,7 @@
 
 .reviews__text {
   margin: 0;
+  max-width: 100%;
 
   @include media-breakpoint-up(tablet) {
     order: -1;
@@ -129,6 +131,7 @@
     position: absolute;
     top: 209px;
     width: calc(100% - #{$side-paddings-desktop} * 2);
+    left: $side-paddings-desktop;
   }
 }
 
