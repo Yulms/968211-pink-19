@@ -22,42 +22,42 @@
   text-align: center;
   font-weight: 300;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     font-size: 24px;
     line-height: 28px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     font-size: 40px;
     line-height: 48px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 50px;
     line-height: 60px;
   }
 }
 
 .about__title+.about__title {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-top: 30px;
   }
 }
 
 .about__list-container {
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     position: relative;
     z-index: 0;
   }
 }
 
 .about__list-wrapper {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-top: 51px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 23px;
     padding-bottom: 41px;
     padding-left: 50%;
@@ -69,7 +69,7 @@
   padding: 0;
   list-style: none;
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -157,11 +157,11 @@
 }
 
 .about__item+.about__item {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-top: 31px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-top: 34px;
   }
 }
@@ -171,13 +171,13 @@
 .about__item--change {}
 
 .about__item--friends::after {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     content: "";
     background-repeat: no-repeat;
     background-position: center top;
   }
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: block;
     padding-top: 99.286%;
     margin-top: 40px;
@@ -198,7 +198,7 @@
     }
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     position: absolute;
     right: 51.6%;
     top: 0;
@@ -226,20 +226,20 @@
   margin: 0;
   font-weight: 700;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 12px;
     text-align: center;
   }
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     font-size: 18px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 13px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 24px;
     font-size: 30px;
     line-height: 30px;
@@ -249,22 +249,22 @@
 .about__item-text {
   margin: 0;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     text-align: center;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 30px;
   }
 }
 
 .about__extra {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: none;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     background-color: #f2f2f2;
   }
 }
@@ -273,29 +273,29 @@
   display: flex;
   align-items: center;
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 59px;
     padding-bottom: 67px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-top: 26px;
     padding-bottom: 67px;
   }
 }
 
 .about__extra-content {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 10px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-top: 44px;
   }
 }
 
 .about__extra-title {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin: 0 0 10px;
     font-size: 30px;
     line-height: 36px;
@@ -303,17 +303,17 @@
     color: $color-title;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 21px;
   }
 }
 
 .about__extra-text {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin: 0 0 11px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 31px;
     font-size: 18px;
     line-height: 30px;
@@ -321,7 +321,7 @@
 }
 
 .about__extra-icon-container {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     position: relative;
     margin-right: 70px;
 
@@ -335,7 +335,7 @@
     }
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     &::before {
       bottom: 19px;
       left: 19px;
@@ -347,7 +347,7 @@
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     &::before {
       bottom: 23px;
       left: 23px;
@@ -361,19 +361,19 @@
 }
 
 .about__extra-icon {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: block;
     fill: #dedede;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     width: 298px;
     height: 345px;
   }
 }
 
 .about__extra-title-br {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: none;
   }
 }

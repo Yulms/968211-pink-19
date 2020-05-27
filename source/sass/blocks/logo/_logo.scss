@@ -25,19 +25,19 @@
 }
 
 .logo__image--mobile {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: block;
   }
 }
 
 .logo__image--tablet {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     display: block;
   }
 }
 
 .logo__image--desktop {
-  @include media-breakpoint-only(desktop) {
+  @media (min-width: $desktop) {
     display: block;
   }
 }

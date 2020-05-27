@@ -6,7 +6,7 @@
 }
 
 .radiocheck__input {
-  @include visually-hidden();
+  @include visually-hidden;
 }
 
 .radiocheck__box {

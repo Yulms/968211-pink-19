@@ -1,5 +1,5 @@
 .upload {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-bottom: 28px;
   }
 }
@@ -7,41 +7,41 @@
 .upload__intro {
   text-align: center;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 44px 0 41px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 66px 25px 69px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 59px 100px 66px;
   }
 }
 
 .upload__container {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     background-color: $color-background;
   }
 }
 
 .upload__inner {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-top: 20px;
     padding-bottom: 41px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 57px;
     padding-bottom: 54px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-top: 58px;
     padding-bottom: 56px;
     padding-left: 80px;
@@ -50,12 +50,12 @@
 }
 
 .upload__form {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     flex: 0 0 50%;
     padding: 0 23px 0 27px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex-basis: 53.5%;
   }
 }
@@ -64,7 +64,7 @@
   margin: 0;
   line-height: 30px;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     font-size: 18px;
   }
 }
@@ -72,13 +72,13 @@
 .upload__image-wrapper {
   margin: 0;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     flex-basis: 300px;
     flex-shrink: 0;
     margin-right: 20px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-right: 61px;
   }
 }
@@ -87,7 +87,7 @@
   display: block;
   width: 100%;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 41px;
   }
 }
@@ -97,13 +97,13 @@
   padding: 0;
   border: 0;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     height: 100%;
   }
 }
 
 .upload__fieldset-flex {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,7 +116,7 @@
   padding: 0;
   list-style: none;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     position: relative;
     display: flex;
     justify-content: center;
@@ -126,21 +126,21 @@
     margin-bottom: 34px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-right: 5px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-bottom: 20px;
   }
 }
 
 .upload__controls-item {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 0 17px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     align-items: center;
     padding-bottom: 15px;
@@ -151,7 +151,7 @@
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-bottom: 10px;
     padding-right: 28px;
   }
@@ -168,14 +168,14 @@
   outline: 0;
   cursor: pointer;
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     flex-shrink: 0;
     height: 40px;
     margin-right: 5px;
     transform: translateX(-10px);
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     height: 44px;
     margin-right: 46px;
   }
@@ -191,7 +191,7 @@
   margin: auto;
   fill: rgba($color-secondary, 0.3);
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     &--crop {
       width: 22px;
       height: 22px;
@@ -225,17 +225,17 @@
 .upload__button-tune .upload__icon {}
 
 .upload__slider {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: none;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     flex-grow: 1;
   }
 }
 
 .upload__button-tune--active+.upload__slider {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: block;
     position: absolute;
     left: 0;
@@ -245,7 +245,7 @@
 }
 
 .upload__submit-container {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     border-top: 1px solid #dddfe0;
   }
 
@@ -254,34 +254,34 @@
     flex-direction: column;
   }
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 38px 0 0;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     // padding: 64px 0 0;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 .upload__button {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &:not(:last-child) {
       margin-bottom: 12px;
     }
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     &:not(:last-child) {
       margin-bottom: 24px;
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     // flex-basis: 45%;
     // ie11
     width: 45%;

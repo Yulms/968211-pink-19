@@ -2,12 +2,12 @@
   color: $color-primary;
   text-decoration: underline;
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     font-size: 14px;
     line-height: 24px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 30px;
   }

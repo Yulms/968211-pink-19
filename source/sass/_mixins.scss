@@ -11,6 +11,18 @@
   }
 }
 
+@mixin hover-effects--light {
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;

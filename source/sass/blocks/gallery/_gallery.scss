@@ -3,33 +3,33 @@
 }
 
 .gallery__layout {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin: -20px 0 0 -20px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin: -54px 0 0 -20px;
   }
 }
 
 .gallery__layout-item {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     padding: 20px 0 0 20px;
     display: flex;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     min-height: 474px;
     // flex: 0 0 50%;
     // для IE11 тоже самое в 2 строки:
@@ -37,7 +37,7 @@
     width: 50%;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     min-height: 609px;
     padding: 54px 0 0 20px;
     // flex: 0 0 33.3333%;
@@ -48,29 +48,29 @@
 }
 
 .gallery__layout-item--pan {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     flex: 0 0 100%;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 30px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: -5px;
   }
 }
 
 .gallery__intro {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 49px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 76px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 88px;
   }
 }

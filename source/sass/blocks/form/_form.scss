@@ -1,27 +1,27 @@
 .form {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-bottom: 15px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-top: 40px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-bottom: 51px;
   }
 }
 
 .form__section-container {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     flex-direction: column;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
@@ -32,7 +32,7 @@
 }
 
 .form__section {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &--fio {
       padding: 38px 0 42px;
     }
@@ -54,7 +54,7 @@
     }
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     // padding: 72px 0 42px;
 
     &--fio {
@@ -82,13 +82,13 @@
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     &--fio {
       padding-top: 45px;
     }
   }
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &:nth-child(even) {
       background-color: $color-background;
     }
@@ -96,7 +96,7 @@
 }
 
 .form__section--fio {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     // flex: 0 0 50%;
     // ie11
     width: 50%;
@@ -106,7 +106,7 @@
 }
 
 .form__section--radios {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     // flex: 0 0 50%;
     // ie11
     width: 50%;
@@ -116,25 +116,25 @@
 }
 
 .form__section--contacts {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex: 0 0 100%;
   }
 }
 
 .form__section--checks {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex: 0 0 100%;
   }
 }
 
 .form__section--text-area {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex: 0 0 100%;
   }
 }
 
 .form__fieldset-wrapper {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -157,51 +157,51 @@
   padding: 0;
   // text-align: center;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     border: 0;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     border: 2px solid $color-controls;
   }
 }
 
 .form__section--radios .form__fieldset {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 46px 58px 51px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 46px 31px 54px;
   }
 }
 
 .form__section--contacts .form__fieldset {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 37px 56px 30px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 34px 58px 17px;
   }
 }
 
 .form__section--checks .form__fieldset {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 44px 56px 48px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 44px 51px 55px 56px;
   }
 }
 
 .form__section--text-area .form__fieldset {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 37px 57px 51px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 34px 57px 43px;
   }
 }
@@ -218,29 +218,29 @@
   text-transform: uppercase;
   color: $color-primary;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 39px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     padding: 0 25px;
   }
 }
 
 .form__section--radios .form__legend {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 36px;
   }
 }
 
 .form__section--text-area .form__legend {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 16px;
   }
 }
 
 .form__legend--contacts {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     @include visually-hidden()
   }
 }
@@ -252,20 +252,20 @@
 }
 
 .form__section--radios .form__list {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-left: 43px;
   }
 }
 
 .form__section--contacts .form__list {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .form__section--checks .form__list {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     margin: -43px 0 0;
@@ -273,13 +273,13 @@
 }
 
 .form__item {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &:not(:last-child) {
       margin-bottom: 21px;
     }
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 52px;
     }
@@ -287,31 +287,31 @@
 }
 
 .form__text-input-label {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 9px;
     margin-left: 22px;
     margin-right: 15px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-right: 19px;
   }
 }
 
 .form__text-input-contacts .form__text-input-label {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin: 14px 0 0 21px;
   }
 }
 
 .form__section--checks .form__item {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     &:not(:last-child) {
       margin-bottom: 43px;
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin: 43px 0 0;
 
     &--shark {
@@ -355,28 +355,28 @@
 }
 
 .form__section--contacts .form__item {
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     &:not(:last-child) {
       margin-bottom: 33px;
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex: 0 0 45.7317%;
     margin-bottom: 0;
   }
 }
 
 .form__area-text-input {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     height: 201px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     height: 193px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     height: 128px;
   }
 }
@@ -385,32 +385,32 @@
   display: flex;
   align-items: center;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-top: 6px;
     flex-direction: column;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-top: 25px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     width: 100%;
     justify-content: space-between;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-top: 23px;
   }
 }
 
 .form__button {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     width: 100%;
     margin-bottom: 35px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     width: calc(50% - 10px);
     max-width: 300px;
   }
@@ -423,7 +423,7 @@
 }
 
 .form__footnote--no-matter {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     display: none;
   }
 }
@@ -433,7 +433,7 @@
 }
 
 .form__text-input-contacts {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     flex-direction: column-reverse;
     align-items: stretch;
   }

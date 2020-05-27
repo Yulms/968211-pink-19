@@ -69,11 +69,11 @@
     padding-top: 90px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 184px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-top: 209px;
   }
 }
@@ -81,7 +81,7 @@
 .page-entry--app .page-entry__wrapper {
   background-repeat: no-repeat;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-bottom: 29px;
     background-image: url("../img/raster/iphone-hand-mobile@1x.png");
     background-position: calc(50% - 31px) 86px;
@@ -101,7 +101,7 @@
     }
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-bottom: 110px;
     background-image: url("../img/raster/iphone-hand-tablet@1x.png");
     background-position: right -20px top;
@@ -121,7 +121,7 @@
     }
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-bottom: 122px;
     background-image: url("../img/raster/iphone-hand-desktop@1x.png");
     background-position: right -116px top;
@@ -147,7 +147,7 @@
     max-width: calc((100% - 20px) / 2);
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     max-width: 31.9148%;
     margin-left: calc((100% - 940px)/2);
   }
@@ -159,36 +159,36 @@
   font-weight: 300;
   color: #ffffff;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     font-size: 24px;
     line-height: 28px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     font-size: 50px;
     line-height: 58px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 50px;
     line-height: 60px;
   }
 }
 
 .page-entry--app .page-entry__title {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     min-height: 370px;
     margin-bottom: 30px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 20px;
     margin-bottom: 33px;
     font-size: 40px;
     line-height: 47px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 51px;
     padding-top: 9px;
   }
@@ -197,15 +197,15 @@
 .page-entry__button {
   width: 100%;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 22px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 36px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 58px;
   }
 }
@@ -216,12 +216,12 @@
   font-weight: 300;
   color: #ffffff;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     font-size: 14px;
     line-height: 24px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 24px;
   }
@@ -234,15 +234,15 @@
   padding: 0;
   list-style: none;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin: 0 0 9px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin: 0 0 22px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin: 0 0 40px;
   }
 }

@@ -1,19 +1,19 @@
 .contacts {}
 
 .contacts__wrapper {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-top: 42px;
     padding-bottom: 38px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding-top: 46px;
     padding-bottom: 28px;
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding-top: 65px;
     padding-bottom: 42px;
   }
@@ -24,19 +24,19 @@
   text-align: center;
   font-weight: 300;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 34px;
     font-size: 24px;
     line-height: 29px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 43px;
     font-size: 40px;
     line-height: 48px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 56px;
     font-size: 50px;
     line-height: 60px;
@@ -44,17 +44,17 @@
 }
 
 .contacts__info-container {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-top: -49px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-left: -10px;
     margin-right: -10px;
   }
@@ -64,24 +64,24 @@
   margin: 0;
   text-align: center;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     &:not(:last-child) {
       margin-bottom: 19px;
     }
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     flex-basis: 50%;
     margin-top: 49px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     padding-left: 20px;
     padding-right: 20px;
   }
 
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     width: 33.3333%;
 
     &--write {
@@ -95,15 +95,15 @@
   font-weight: 700;
   font-size: 18px;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 6px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-bottom: 6px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 26px;
   }
 }
@@ -134,29 +134,29 @@
   // z-index: 0;
   overflow: hidden;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     height: 200px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     height: 374px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     height: 480px;
   }
 }
 
 .contacts__map-img {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-top: -200px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-top: -374px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-top: -480px;
   }
 }

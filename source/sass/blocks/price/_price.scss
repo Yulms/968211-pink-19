@@ -1,12 +1,12 @@
 .price {}
 
 .price__inner {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-top: 59px;
     padding-bottom: 41px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -29,7 +29,7 @@
 }
 
 .price__table-wrapper {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     width: 100%;
     margin-bottom: 34px;
     overflow-x: auto;
@@ -41,21 +41,21 @@
 .price__table {
   border-collapse: collapse;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     scroll-snap-align: center;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     width: 100%;
   }
 }
 
 .price__cell {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     min-width: 320px - $side-paddings-mobile * 2;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     width: 25%;
   }
 }
@@ -68,18 +68,18 @@
   border: 2px solid #f2f2f2;
   overflow: hidden;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 16px;
     line-height: 30px;
   }
 
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 14px 14px 10px;
     line-height: 27px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 16px;
     line-height: 30px;
   }
@@ -92,23 +92,23 @@
   background-color: #ffffff;
   border: 2px solid $color-controls;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     @include visually-hidden;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 7px 15px;
     font-size: 14px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     padding: 14px 21px;
     font-size: 18px;
   }
 }
 
 .price__cell--x-cell {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     @include visually-hidden;
   }
 }
@@ -119,18 +119,18 @@
   border: 2px solid $color-controls;
   text-transform: uppercase;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding-left: 22px;
     padding-right: 20px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     text-align: center;
   }
 }
 
 .price__cell-wrapper {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,15 +142,15 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     font-size: 18px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     font-size: 16px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 18px;
   }
 
@@ -161,33 +161,33 @@
 .price__rate-price {
   font-weight: 300;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     font-size: 24px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     font-size: 18px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 24px;
   }
 }
 
 .price__exra-option {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
 
 .price__slider-points {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
 
 .price__icon {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: block;
     margin: 0 auto;
   }
@@ -211,15 +211,15 @@
   user-select: none;
   transform-origin: top;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     transform: translateX(-50%) rotate(-45deg) translateY(22px);
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     transform: translateX(-50%) rotate(-45deg) translateY(14px);
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     transform: translateX(-50%) rotate(-45deg) translateY(22px);
   }
 }

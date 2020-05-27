@@ -5,11 +5,11 @@
   // for ie11 unbug
   display: flex;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: -66px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-bottom: -110px;
   }
 }
@@ -19,7 +19,7 @@
 }
 
 .header--nav-opened {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     background-color: $color-secondary;
   }
 }
@@ -27,12 +27,12 @@
 .header__wrapper {
   width: 100%;
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     padding-left: 0;
     padding-right: 0;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,19 +41,19 @@
 }
 
 .header__logo {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     display: table;
   }
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 22px $side-paddings-mobile 21px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     padding: 27px $side-paddings-tablet 43px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex-shrink: 0;
     padding-bottom: 16px;
   }
@@ -62,14 +62,14 @@
 .header__nav {
   position: relative;
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     flex-shrink: 0;
     max-width: 75%;
   }
 }
 
 .header__nav-toggle {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     position: absolute;
     right: 0;
     padding: 23px 19px;
@@ -80,15 +80,15 @@
     outline: none;
   }
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     top: -69px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     top: -88px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: none;
   }
 }
@@ -125,12 +125,12 @@
   padding: 0;
   list-style: none;
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     margin: 0;
     border-top: 1px solid #000000;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -139,13 +139,13 @@
 }
 
 .header--nav-closed .header__nav-list {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     display: none;
   }
 }
 
 .header__nav-item {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     margin-left: 80px;
   }
 }
@@ -156,7 +156,7 @@
   color: #ffffff;
   text-decoration: none;
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     padding: 15px;
     text-align: center;
     line-height: 32px;
@@ -181,13 +181,13 @@
 .header__nav-link:active {
   opacity: 0.3;
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     color: #ffffff;
   }
 }
 
 .header__nav-link--active {
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     position: relative;
 
     &::after {

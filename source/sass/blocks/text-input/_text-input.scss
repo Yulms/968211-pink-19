@@ -20,11 +20,11 @@
 }
 
 .text-input__icon-wrapper {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     display: none;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     position: absolute;
     bottom: 2px;
     right: 2px;
@@ -80,7 +80,7 @@
 }
 
 .text-input__field--iconised {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     padding-right: 60px;
   }
 }

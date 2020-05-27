@@ -19,12 +19,12 @@
   border-radius: 100px;
   border: 3px solid #ffffff;
 
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     font-size: 18px;
     line-height: 23px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     font-size: 21px;
     line-height: 24px;
   }

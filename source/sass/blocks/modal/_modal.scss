@@ -30,19 +30,19 @@
     padding: 46px $side-paddings-mobile 50px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     max-width: 460px;
     padding: 51px 70px 46px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     max-width: 781px;
     padding: 51px 190px 46px;
   }
 }
 
 .modal--error .modal__inner {
-  @include media-breakpoint-down(tablet) {
+  @media (max-width: $tablet-only) {
     background-image: none;
   }
 }
@@ -74,7 +74,7 @@
   margin: 0;
   width: 100%;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     min-height: 72px;
     font-size: 18px;
     line-height: 24px;
@@ -82,32 +82,32 @@
 }
 
 .modal__button {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     width: 100%;
     margin-top: 78px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     width: 300px;
     margin-top: 79px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     width: 462px;
     margin-top: 82px;
   }
 }
 
 .modal--error .modal__button {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-top: 36px;
   }
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     margin-top: 36px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     width: 300px;
     margin-top: 82px;
   }

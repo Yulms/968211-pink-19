@@ -1,7 +1,7 @@
 .post {
   margin: 0;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,13 +9,15 @@
 }
 
 .post--pan {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: block;
   }
 }
 
 .post__image-link {
   display: block;
+
+  @include hover-effects--light;
 }
 
 .post__image-wrapper {
@@ -23,9 +25,9 @@
 }
 
 .post--pan .post__image-wrapper {
-  @include full-width();
+  @include full-width;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: center;
   }
@@ -40,11 +42,11 @@
   height: 100%;
   max-width: none;
 
-  @include media-breakpoint-only(tablet) {
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
     min-height: 509px;
   }
 
-  @include media-breakpoint-up(desktop) {
+  @media (min-width: $desktop) {
     min-height: 506px;
   }
 }
@@ -52,11 +54,11 @@
 .post__info {
   background-color: $color-background;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     padding: 18px 18px 8px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     padding: 24px 27px 10px;
     flex-grow: 1;
   }
@@ -68,7 +70,7 @@
 }
 
 .post--pan .post__info {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -79,7 +81,7 @@
 }
 
 .post--pan .post__header {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-bottom: 11px;
   }
 }
@@ -101,7 +103,7 @@
 }
 
 .post:not(.post--pan) .post__text {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     margin-bottom: auto;
   }
 }
@@ -117,21 +119,21 @@
   align-items: center;
   color: $color-primary;
 
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin: -3px 0 0 -17px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     justify-content: space-between;
   }
 }
 
 .post--pan .post__footer {
-  @include media-breakpoint-only(mobile) {
+  @media (max-width: $mobile-only) {
     margin-top: -2px;
   }
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     order: 1;
     margin-right: -16px;
   }
@@ -146,15 +148,15 @@
   cursor: pointer;
   outline: none;
 
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     order: 1;
   }
 
-  @include hover-effects();
+  @include hover-effects;
 }
 
 .post:not(.post--pan) .post__like-button {
-  @include media-breakpoint-up(tablet) {
+  @media (min-width: $tablet) {
     transform: translateX(12px);
   }
 }
